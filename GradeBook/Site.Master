@@ -1,0 +1,48 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="GradeBook.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>GradeBook</title>
+    <link rel="stylesheet" type="text/css" href="Styles.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+                    <table class="auto-style1">
+            <tr>
+                <td colspan="2" style="height:100px">&nbsp;
+                    <h2>GradeBook</h2>
+                </td>
+                    
+            </tr>
+            <tr>
+                <td style="width:200px">
+                    <div class="menu">
+                    <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Vertical">
+                            <Items>
+                            <asp:MenuItem NavigateUrl="~/Top.aspx" Text="Top" />
+                            <asp:MenuItem NavigateUrl="~/Students.aspx" Text="Students" />
+                            <asp:MenuItem NavigateUrl="~/Course.aspx" Text="Courses" />
+                            <asp:MenuItem NavigateUrl="~/Grade.aspx" Text="Grade" />
+
+                            </Items>
+                    </asp:Menu>
+                    </div>    
+                </td>
+                <td>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </table>
+        </div>
+    </form>
+</body>
+</html>
